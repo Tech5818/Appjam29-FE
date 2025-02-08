@@ -1,5 +1,10 @@
+import { FeelPage } from '@pages/feel/ui';
 import { FirstPage } from '@pages/first/ui';
 import { HomePage } from '@pages/home/ui';
+import { ProfilePage } from '@pages/profile/ui';
+import { RecognitionPage } from '@pages/recognition/ui';
+import { SummationPage } from '@pages/summation/ui';
+import { WandPage } from '@pages/wand/ui';
 import { createBrowserRouter } from 'react-router-dom';
 
 export const Router = createBrowserRouter([
@@ -10,5 +15,25 @@ export const Router = createBrowserRouter([
   {
     path: '/first',
     element: <FirstPage />,
+  },
+  {
+    path: '/feel',
+    element: <FeelPage />,
+  },
+  {
+    path: '/profile',
+    element: <ProfilePage />,
+  },
+  {
+    path: '/recognition',
+    element: <RecognitionPage />,
+  },
+  {
+    path: '/summation',
+    element: <SummationPage />,
+  },
+  {
+    path: '/wand',
+    element: <WandPage />,
   },
 ]);

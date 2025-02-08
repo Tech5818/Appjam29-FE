@@ -1,4 +1,4 @@
-import { Typography } from '@shared/ui';
+import { Typography, VStack } from '@shared/ui';
 import { BottomNavigationBar } from '@widgets/ui/BottomNavigationBar';
 import styled from 'styled-components';
 
@@ -7,7 +7,7 @@ export const FeelPage = () => {
     <>
       <Container>
         <Content>
-          <TextBox>
+          <VStack $gap={'3px'}>
             <Typography
               size="Title1"
               weight={'bold'}
@@ -18,8 +18,8 @@ export const FeelPage = () => {
             <Typography size="Body" weight={'bold'}>
               대화의 긍정과 부정을 나타낸 지표입니다.
             </Typography>
-          </TextBox>
-          <TextBox>
+          </VStack>
+          <VStack $gap={'3px'}>
             <Typography
               size="Title1"
               weight={'bold'}
@@ -27,11 +27,15 @@ export const FeelPage = () => {
             >
               그래프
             </Typography>
-            <Typography size="Body" weight={'bold'}>
-              오전과 오후로 나뉘어 발생한 각 대화의 감정
-              평균을 표시합니다.
-            </Typography>
-          </TextBox>
+            <VStack>
+              <Typography size="Body" weight={'bold'}>
+                오전과 오후로 나뉘어 발생한 각 대화의 감정
+              </Typography>
+              <Typography size="Body" weight={'bold'}>
+                평균을 표시합니다.
+              </Typography>
+            </VStack>
+          </VStack>
         </Content>
         <BottomNavigationBar />
       </Container>
@@ -44,12 +48,6 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-`;
-
-const TextBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
 `;
 
 const Content = styled.div`

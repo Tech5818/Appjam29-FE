@@ -23,12 +23,17 @@ const WordCountList = () => {
     <>
       <Container>
         <ListWrapper>
-          <Typography size="Title3" weight={'bold'}>
+          <Typography
+            size="Title3"
+            weight={'bold'}
+            color="green"
+          >
             반복적인 단어
           </Typography>
           <ListBox>
             {dummyDataSet1.map((item, idx) => (
               <WordCountElement
+                color="green"
                 key={idx}
                 word={item.word}
                 count={item.count}
@@ -38,12 +43,17 @@ const WordCountList = () => {
           </ListBox>
         </ListWrapper>
         <ListWrapper>
-          <Typography size="Title3" weight={'bold'}>
+          <Typography
+            size="Title3"
+            weight={'bold'}
+            color="red"
+          >
             부정적인 단어
           </Typography>
           <ListBox>
             {dummyDataSet2.map((item, idx) => (
               <WordCountElement
+                color="red"
                 key={idx}
                 word={item.word}
                 count={item.count}

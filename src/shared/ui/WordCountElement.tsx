@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 import { Typography } from './Typography';
+import { ColorKeys } from '@shared/types/theme';
 
 const WordCountElement = ({
   word,
   count,
   isLast,
+  color,
 }: {
   word: string;
   count: number;
   isLast: boolean;
+  color: ColorKeys;
 }) => {
   return (
     <>
@@ -20,22 +23,22 @@ const WordCountElement = ({
             width: '90px',
           }}
         >
-          <Typography size="Body" weight={'bold'}>
+          <Typography
+            size="Body"
+            weight={'bold'}
+            color={color}
+          >
             {word}
           </Typography>
-          <Typography size="Body" weight={'bold'}>
+          <Typography
+            size="Body"
+            weight={'bold'}
+            color={color}
+          >
             {`${count}회`}
           </Typography>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            flex: '1',
-            backgroundColor: 'green',
-            height: '8px',
-            borderRadius: '3px',
-          }}
-        />
+        <Bar $color={color} />
       </Container>
     </>
   );
@@ -51,4 +54,17 @@ const Container = styled.div<{ isLast: boolean }>`
   align-items: center;
   border-bottom: ${({ isLast }) =>
     isLast ? 'none' : '1px solid #d3d3d3'};
+`;
+
+interface BarProps {
+  $color: ColorKeys;
+}
+
+const Bar = styled.div<BarProps>`
+  display: flex;
+  flex: 1;
+  background: ${({ theme, $color }) =>
+    theme.light.color[$color]};
+  height: 8px;
+  border-radius: 3px;
 `;

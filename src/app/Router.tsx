@@ -1,6 +1,8 @@
 import { FeelPage } from '@pages/feel/ui';
 import { FirstPage } from '@pages/first/ui';
+import { GuardianPage } from '@pages/guardian/ui';
 import { HomePage } from '@pages/home/ui';
+import { LoginPage } from '@pages/login/ui';
 import { ProfilePage } from '@pages/profile/ui';
 import { RecognitionPage } from '@pages/recognition/ui';
 import { SummationPage } from '@pages/summation/ui';
@@ -35,5 +37,13 @@ export const Router = createBrowserRouter([
   {
     path: '/wand',
     element: <WandPage />,
+  },
+  {
+    path: '/guardian',
+    element: <GuardianPage />,
+  },
+  {
+    path: '/login',
+    element: <LoginPage />,
   },
 ]);

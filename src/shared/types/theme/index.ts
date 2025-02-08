@@ -1,21 +1,13 @@
-import { color } from "./Color";
+import { color } from './Color';
+import { font } from './Font';
 
 export const light = {
-    color
+  color,
+  font,
 };
 
-export { 
-    ColorArray,
-    // FontArray
-} from "./ThemeArray";
+export { ColorArray, FontArray } from './ThemeArray';
 
-export type { 
-    ColorKeys,
-    // FontKeys 
-} from "./ThemeKeys";
+export type { ColorKeys, FontKeys } from './ThemeKeys';
 
-export type { 
-    ColorTypes, 
-    // FontTypes 
-} from "./ThemeTypes";
-
+export type { ColorTypes, FontTypes } from './ThemeTypes';

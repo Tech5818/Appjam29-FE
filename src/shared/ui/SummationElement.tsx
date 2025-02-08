@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { Typography } from './Typography';
-import { Icon } from './Icon';
 import { ArrowIcon } from './ArrowIcon';
 
 const SummationElement = ({

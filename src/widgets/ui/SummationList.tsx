@@ -96,7 +96,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 25px 0 25px;
 `;
 
 const ListHeader = styled.div`
@@ -105,5 +104,5 @@ const ListHeader = styled.div`
   border-bottom: 1px solid gray;
   width: 100%;
   justify-content: space-between;
-  padding: 0 5px 0 5px;
+  padding: 10px 5px;
 `;

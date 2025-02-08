@@ -1,6 +1,5 @@
 import { Typography } from '@shared/ui';
 import WordCountElement from '@shared/ui/WordCountElement';
-import { useState } from 'react';
 import styled from 'styled-components';
 
 const WordCountList = () => {

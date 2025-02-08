@@ -7,16 +7,20 @@ interface SelectRoleProps {
   children: ReactNode;
   color: ColorKeys;
   role: 'guardian' | 'wand';
+  onClick?: (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => void;
 }
 
 export const SelectRole = ({
   children,
   color,
   role,
+  onClick,
 }: SelectRoleProps) => {
   return (
     <>
-      <Container $color={color}>
+      <Container $color={color} onClick={onClick}>
         <Typography
           size="Title3"
           color={'text'}

@@ -14,7 +14,8 @@ export const FeelPage = () => {
             감정분석
           </Typography>
           <Typography size="Body" weight={'bold'}>
-            대화의 긍정과 부정을 나타낸 지표입니다.
+            대화 내용 속 긍정과 부정을 그래프를 사용하여
+            보여줍니다.
           </Typography>
         </TextBox>
         <TextBox>
